@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>Reads horizontal input axis ("Horizontal").</summary>
     void HandleInput()
     {
-        xInput = Input.GetAxisRaw("Horizontal");
+        xInput = Input.GetAxis("Horizontal");
     }
 
     /// <summary>Applies jump force if jump button is pressed and player is grounded.</summary>
@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
             0f,
             groundLayer
         );
+        Debug.Log("Grounded:" + isGrounded);
     }
 
     /// <summary>Applies friction when grounded and no horizontal input to slow player down smoothly.</summary>
@@ -136,6 +137,8 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetFloat("Speed", Mathf.Abs(xInput));
         anim.SetBool("Grounded", isGrounded);
+
+        Debug.Log($"Speed: {Mathf.Abs(xInput)}, Grounded: {isGrounded}, Interacting: {isInteracting}"); // Testing
     }
 
     /// <summary>Draws ground check box in the editor for visualisation.</summary>
@@ -145,6 +148,12 @@ public class PlayerMovement : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireCube(groundCheckCollider.bounds.center, groundCheckCollider.bounds.size);
+        }
+
+        if (interactPoint != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(interactPoint.position, interactRange);
         }
     }
 
