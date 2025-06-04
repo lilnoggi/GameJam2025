@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -78,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>Applies jump force if jump button is pressed and player is grounded.</summary>
     void HandleJump()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && Mathf.Abs(rb.linearVelocity.y) < 0.1f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
@@ -137,6 +138,14 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetFloat("Speed", Mathf.Abs(xInput));
         anim.SetBool("Grounded", isGrounded);
+
+        // Determine if walking
+        bool isWalking = Mathf.Abs(xInput) > 0.1f;
+        anim.SetBool("IsWalking", isWalking);
+
+        // Jumping state logic (true if in the air)
+        bool isJumping = !isGrounded;
+        anim.SetBool("IsJumping", isJumping);
 
         Debug.Log($"Speed: {Mathf.Abs(xInput)}, Grounded: {isGrounded}, Interacting: {isInteracting}"); // Testing
     }
