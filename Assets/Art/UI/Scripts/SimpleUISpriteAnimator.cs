@@ -4,8 +4,8 @@ using System.Collections;
 
 public class SimpleSpriteAnimator : MonoBehaviour
 {
-    public Sprite[] sprites;  // Sprite-Frames im Inspector zuweisen!
-    public float frameDelay = 0.1f; // Zeit zwischen Frames
+    public Sprite[] sprites;  // assign the sprite frames in the editor 
+    public float frameDelay = 0.1f; // time between frames
 
     private Image image;
     private int currentIndex = 0;
@@ -20,13 +20,13 @@ public class SimpleSpriteAnimator : MonoBehaviour
     {
         while (true)
         {
-            // Nächstes Sprite anzeigen
+            // show next sprite
             image.sprite = sprites[currentIndex];
 
-            // Index zurücksetzen, wenn Ende erreicht
+            // reseting the index
             currentIndex = (currentIndex + 1) % sprites.Length;
 
-            // Warte für den nächsten Frame
+            // wait for next frame
             yield return new WaitForSeconds(frameDelay);
         }
     }
