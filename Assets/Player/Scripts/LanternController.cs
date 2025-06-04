@@ -5,6 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(Animator))]
 public class LanternController : MonoBehaviour
 {
+    private PlayerMovement playerMovement;
     private Animator anim;
 
     public GameObject lanternLightObject;
@@ -18,6 +19,8 @@ public class LanternController : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
+
+        playerMovement = GetComponent<PlayerMovement>();
 
         // safety check
         if (lanternLightObject != null)
@@ -127,7 +130,14 @@ public class LanternController : MonoBehaviour
     /// </summary>
     void UpdateMovementState()
     {
+        /*
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         isWalking = Mathf.Abs(horizontalInput) > 0.1;
+        */
+
+        if (playerMovement != null)
+        {
+            isWalking = playerMovement.IsWalking;
+        }
     }
 }

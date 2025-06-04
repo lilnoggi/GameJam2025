@@ -203,4 +203,6 @@ public class PlayerMovement : MonoBehaviour
 
         isInteracting = false; // Player moves again
     }
+
+        public bool IsWalking => Mathf.Abs(xInput) > 0.1f;
 }
