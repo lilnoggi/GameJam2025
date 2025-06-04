@@ -813,8 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce05279bb3d9751499ab9fd76e0329ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  jumpForce: 5
+  moveSpeed: 4
+  jumpForce: 8
   maxFallSpeed: -10
   frictionFactor: 0.2
   groundCheckCollider: {fileID: 64394107}
