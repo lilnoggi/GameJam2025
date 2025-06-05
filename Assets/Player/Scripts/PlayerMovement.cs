@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
         if (xInput != 0)
             transform.localScale = new Vector3(Mathf.Sign(xInput), 1f, 1f);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     }
 
     void HandleJump()
@@ -76,6 +77,8 @@ public class PlayerController : MonoBehaviour
         }
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     }
 
     void HandleJump()
@@ -91,6 +94,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (lanternEquipped)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             {
                 anim.SetTrigger("UnequipLantern");
@@ -152,6 +156,8 @@ public class PlayerController : MonoBehaviour
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             {
                 anim.SetTrigger("UnequipLantern");
             }
@@ -171,7 +177,47 @@ public class PlayerController : MonoBehaviour
         isJumping = rb.linearVelocity.y > 0.1f && !isGrounded;
         isFalling = rb.linearVelocity.y < -0.1f && !isGrounded;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+    }
+
+    void UpdateAnimator()
+    {
+        anim.SetFloat("Speed", Mathf.Abs(xInput));
+        anim.SetBool("Grounded", isGrounded);
+        anim.SetBool("IsWalking", Mathf.Abs(xInput) > 0.1f);
+        anim.SetBool("LanternEquipped", lanternEquipped);
+    }
+
+    void CheckGround()
+    {
+        isGrounded = Physics2D.OverlapBox(
+            groundCheckPoint.position,
+            groundCheckSize,
+            0f,
+            groundLayer
+        );
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheckPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(groundCheckPoint.position, groundCheckSize);
+        }
+    }
+
+    public void TriggerInteract()
+    {
+        anim.SetTrigger("Interact");
+    }
+
+    public void TriggerDeath()
+    {
+        anim.Play(lanternEquipped ? "Player_Death_Lantern" : "Player_Death");
+>>>>>>> Stashed changes
     }
 
     void UpdateAnimator()

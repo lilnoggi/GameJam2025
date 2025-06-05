@@ -12,7 +12,11 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 5785231051656267997}
+=======
+  - {fileID: 710516440100949364}
+>>>>>>> Stashed changes
 =======
   - {fileID: 710516440100949364}
 >>>>>>> Stashed changes
@@ -43,7 +47,12 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: -4831337619698743076}
+=======
+  - {fileID: 3886912588283063650}
+  - {fileID: 8805706191715644241}
+>>>>>>> Stashed changes
 =======
   - {fileID: 3886912588283063650}
   - {fileID: 8805706191715644241}
@@ -75,7 +84,11 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: -5799423863801306029}
+=======
+  - {fileID: -6869659556091976992}
+>>>>>>> Stashed changes
 =======
   - {fileID: -6869659556091976992}
 >>>>>>> Stashed changes
@@ -178,7 +191,11 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 7273504284259666804}
+=======
+  - {fileID: 5876106558428880524}
+>>>>>>> Stashed changes
 =======
   - {fileID: 5876106558428880524}
 >>>>>>> Stashed changes
@@ -198,7 +215,11 @@ AnimatorState:
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1101 &-5799423863801306029
+=======
+--- !u!1101 &-6047539566671086002
+>>>>>>> Stashed changes
 =======
 --- !u!1101 &-6047539566671086002
 >>>>>>> Stashed changes
@@ -211,7 +232,11 @@ AnimatorStateTransition:
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_DstState: {fileID: 5108212657913775767}
+=======
+  m_DstState: {fileID: 192163644118823875}
+>>>>>>> Stashed changes
 =======
   m_DstState: {fileID: 192163644118823875}
 >>>>>>> Stashed changes
@@ -222,7 +247,11 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_ExitTime: 0.625
+=======
+  m_ExitTime: 0
+>>>>>>> Stashed changes
 =======
   m_ExitTime: 0
 >>>>>>> Stashed changes
@@ -361,7 +390,11 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1101 &-3592356682175286503
+=======
+--- !u!1101 &-3740777366616395180
+>>>>>>> Stashed changes
 =======
 --- !u!1101 &-3740777366616395180
 >>>>>>> Stashed changes
@@ -376,9 +409,12 @@ AnimatorStateTransition:
     m_ConditionEvent: UnequipLantern
     m_EventTreshold: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - m_ConditionMode: 2
     m_ConditionEvent: IsWalking
     m_EventTreshold: 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_DstStateMachine: {fileID: 0}
@@ -388,7 +424,11 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_TransitionDuration: 1
+=======
+  m_TransitionDuration: 0.25
+>>>>>>> Stashed changes
 =======
   m_TransitionDuration: 0.25
 >>>>>>> Stashed changes
@@ -399,6 +439,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1101 &-3429285241906918486
 AnimatorStateTransition:
@@ -427,6 +468,8 @@ AnimatorStateTransition:
   m_CanTransitionToSelf: 1
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 --- !u!1102 &-2576599722279178110
 AnimatorState:
   serializedVersion: 6
@@ -440,8 +483,12 @@ AnimatorState:
   m_Transitions:
   - {fileID: 2503052264244593400}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: -3429285241906918486}
   - {fileID: 6597398811565725891}
+=======
+  - {fileID: 8851350874466659292}
+>>>>>>> Stashed changes
 =======
   - {fileID: 8851350874466659292}
 >>>>>>> Stashed changes
@@ -525,7 +572,11 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 456305348820843258}
+=======
+  - {fileID: -6047539566671086002}
+>>>>>>> Stashed changes
 =======
   - {fileID: -6047539566671086002}
 >>>>>>> Stashed changes
@@ -637,6 +688,7 @@ AnimatorState:
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1101 &456305348820843258
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -666,6 +718,9 @@ AnimatorStateTransition:
 =======
 --- !u!1101 &710516440100949364
 >>>>>>> Stashed changes
+=======
+--- !u!1101 &710516440100949364
+>>>>>>> Stashed changes
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -675,7 +730,11 @@ AnimatorStateTransition:
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_DstState: {fileID: 4605140053253031500}
+=======
+  m_DstState: {fileID: -8613033118797404226}
+>>>>>>> Stashed changes
 =======
   m_DstState: {fileID: -8613033118797404226}
 >>>>>>> Stashed changes
@@ -785,7 +844,11 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 1781757890097362889}
+=======
+  - {fileID: -7998654961993120952}
+>>>>>>> Stashed changes
 =======
   - {fileID: -7998654961993120952}
 >>>>>>> Stashed changes
@@ -816,7 +879,12 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: -3592356682175286503}
+=======
+  - {fileID: -3740777366616395180}
+  - {fileID: 5668839401953886934}
+>>>>>>> Stashed changes
 =======
   - {fileID: -3740777366616395180}
   - {fileID: 5668839401953886934}
@@ -849,8 +917,12 @@ AnimatorState:
   m_Transitions:
   - {fileID: 5218357767028605984}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 7047084782925877504}
   - {fileID: 8037590658535277270}
+=======
+  - {fileID: -8354351341586558597}
+>>>>>>> Stashed changes
 =======
   - {fileID: -8354351341586558597}
 >>>>>>> Stashed changes
@@ -898,8 +970,11 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1101 &5785231051656267997
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1101 &5668839401953886934
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -932,6 +1007,9 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &5876106558428880524
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -942,7 +1020,11 @@ AnimatorStateTransition:
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_DstState: {fileID: -8613033118797404226}
+=======
+  m_DstState: {fileID: -2576599722279178110}
+>>>>>>> Stashed changes
 =======
   m_DstState: {fileID: -2576599722279178110}
 >>>>>>> Stashed changes
@@ -1002,10 +1084,17 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -6462018612038103203}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Position: {x: 290, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4605140053253031500}
     m_Position: {x: 40, y: -260, z: 0}
+=======
+    m_Position: {x: 420, y: -220, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 4605140053253031500}
+    m_Position: {x: 290, y: -300, z: 0}
+>>>>>>> Stashed changes
 =======
     m_Position: {x: 420, y: -220, z: 0}
   - serializedVersion: 1
@@ -1021,6 +1110,7 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -8613033118797404226}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Position: {x: 880, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8911982904114544892}
@@ -1028,6 +1118,15 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -8405437792976278736}
     m_Position: {x: 760, y: -40, z: 0}
+=======
+    m_Position: {x: 930, y: -240, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8911982904114544892}
+    m_Position: {x: 690, y: -190, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8405437792976278736}
+    m_Position: {x: 910, y: -140, z: 0}
+>>>>>>> Stashed changes
 =======
     m_Position: {x: 930, y: -240, z: 0}
   - serializedVersion: 1
@@ -1049,7 +1148,11 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 192163644118823875}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Position: {x: 480, y: -30, z: 0}
+=======
+    m_Position: {x: 300, y: 100, z: 0}
+>>>>>>> Stashed changes
 =======
     m_Position: {x: 300, y: 100, z: 0}
 >>>>>>> Stashed changes
@@ -1059,7 +1162,11 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -1565089062795006704}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Position: {x: 480, y: -170, z: 0}
+=======
+    m_Position: {x: 300, y: 50, z: 0}
+>>>>>>> Stashed changes
 =======
     m_Position: {x: 300, y: 50, z: 0}
 >>>>>>> Stashed changes
@@ -1075,7 +1182,11 @@ AnimatorStateMachine:
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2576599722279178110}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1101 &6597398811565725891
+=======
+--- !u!1101 &8805706191715644241
+>>>>>>> Stashed changes
 =======
 --- !u!1101 &8805706191715644241
 >>>>>>> Stashed changes
@@ -1087,10 +1198,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - m_ConditionMode: 2
     m_ConditionEvent: IsWalking
     m_EventTreshold: 0
 =======
+=======
+>>>>>>> Stashed changes
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.1
@@ -1122,6 +1236,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   - m_ConditionMode: 1
     m_ConditionEvent: EquipLantern
@@ -1140,6 +1257,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1101 &7047084782925877504
 AnimatorStateTransition:
@@ -1247,5 +1365,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
