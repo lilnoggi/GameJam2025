@@ -75,45 +75,46 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Checks if player is touching the ground using the groundCheckCollider.
-    /// </summary>
-    void CheckGround()
+    void HandleJump()
     {
-        isGrounded = Physics2D.OverlapBox(
-            groundCheckCollider.bounds.center,
-            groundCheckCollider.bounds.size,
-            0f,
-            groundLayer
-        );
-        Debug.Log("Grounded:" + isGrounded);
-    }
-
-    /// <summary>Applies friction when grounded and no horizontal input to slow player down smoothly.</summary>
-    void ApplyFriction()
-    {
-        if (isGrounded && Mathf.Approximately(xInput, 0f))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x * frictionFactor, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
 
-    /// <summary>Limits the maximum falling speed so player doesn't fall too fast.</summary>
-    void ClampFallSpeed()
+    void HandleLanternToggle()
     {
-        if (rb.linearVelocity.y < maxFallSpeed)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxFallSpeed);
+            if (lanternEquipped)
+            {
+                anim.SetTrigger("UnequipLantern");
+            }
+            else
+            {
+                anim.SetTrigger("EquipLantern");
+            }
         }
     }
 
-    /// <summary>Updates animator parameters for movement and grounded state.</summary>
-    void UpdateAnimations()
-    {
-        if (anim == null) return;
+    // Animation Events should call these
+    public void OnEquipLanternComplete() => lanternEquipped = true;
+    public void OnUnequipLanternComplete() => lanternEquipped = false;
 
+    void UpdateStateFlags()
+    {
+        isJumping = rb.linearVelocity.y > 0.1f && !isGrounded;
+        isFalling = rb.linearVelocity.y < -0.1f && !isGrounded;
+    }
+
+    void UpdateAnimator()
+    {
         anim.SetFloat("Speed", Mathf.Abs(xInput));
         anim.SetBool("Grounded", isGrounded);
+        anim.SetBool("IsWalking", Mathf.Abs(xInput) > 0.1f);
+        anim.SetBool("LanternEquipped", lanternEquipped);
+    }
 
         // Determine if walking
         bool isWalking = Mathf.Abs(xInput) > 0.1f;
@@ -126,26 +127,16 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Speed: {Mathf.Abs(xInput)}, Grounded: {isGrounded}, Interacting: {isInteracting}"); // Testing
     }
 
-    /// <summary>Draws ground check box in the editor for visualisation.</summary>
     void OnDrawGizmosSelected()
     {
-        if (groundCheckCollider != null)
+        if (groundCheckPoint != null)
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(groundCheckCollider.bounds.center, groundCheckCollider.bounds.size);
-        }
-
-        if (interactPoint != null)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(interactPoint.position, interactRange);
+            Gizmos.DrawWireCube(groundCheckPoint.position, groundCheckSize);
         }
     }
 
-    /// <summary>
-    /// Handles interaction input and triggers interaction coroutine.
-    /// </summary>
-    void HandleInteraction()
+    public void TriggerInteract()
     {
         if (Input.GetKeyDown(KeyCode.E) && !isInteracting)
         {

@@ -813,6 +813,7 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &1337025190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,6 +839,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   interactPoint: {fileID: 1372583348}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!50 &1337025191
