@@ -1,47 +1,27 @@
 using System;
 using UnityEngine;
 
-/// <summary>
-/// Controls 2D player movement: walk, jump, ground detection, and interaction.
-/// Must be attatched to the Player root GameObject (has the Rigidbody2D component).
-/// </summary>
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
+public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [Tooltip("Horizontal movement speed.")]
     [SerializeField] private float moveSpeed = 5f;
-    [Tooltip("Force applied when jumping.")]
     [SerializeField] private float jumpForce = 8f;
-    [Tooltip("Maximum downward fall speed.")]
-    [SerializeField] private float maxFallSpeed = -10f;
-    [Tooltip("Friction factor applied when grounded and idle.")]
-    [SerializeField, Range(0f, 1f)] private float frictionFactor = 0.2f;
 
-    [Header("Ground Check Settings")]
-    [Tooltip("Collider used to check if the player is grounded.")]
-    [SerializeField] private BoxCollider2D groundCheckCollider;
-    [Tooltip("Layer(s) considered as ground.")]
+    [Header("Ground Check")]
+    [SerializeField] private Transform groundCheckPoint;
+    [SerializeField] private Vector2 groundCheckSize = new Vector2(0.5f, 0.1f);
     [SerializeField] private LayerMask groundLayer;
 
-    [Header("Interaction")]
-    [Tooltip("Radius around interactPoint to detect interactable objects.")]
-    [SerializeField] private float interactRange = 1f;
-    [Tooltip("Layers considered interactable.")]
-    [SerializeField] private LayerMask interactLayer;
-    [Tooltip("Point from where interactions are detected.")]
-    [SerializeField] private Transform interactPoint;
-
-    // Components
     private Rigidbody2D rb;
     private Animator anim;
 
-    // Input values
     private float xInput;
-
-    // State flags
     private bool isGrounded;
-    private bool isInteracting;
+    private bool isJumping;
+    private bool isFalling;
+    private bool lanternEquipped = false;
+    private bool isInteracting = false;
 
     void Awake()
     {
@@ -51,32 +31,32 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Only allow movement input if not interacting
-        if (!isInteracting)
-        {
-            HandleInput();
-            HandleJump();
-        }
-
-        HandleInteraction(); // Always listen for interaction input
-        UpdateAnimations(); // Update animator parameters every frame
+        HandleInput();
+        HandleJump();
+        HandleLanternToggle();
+        UpdateStateFlags();
+        UpdateAnimator();
     }
 
     void FixedUpdate()
     {
         CheckGround();
-        ApplyMovement();
-        ApplyFriction();
-        ClampFallSpeed();
+        Move();
     }
 
-    /// <summary>Reads horizontal input axis ("Horizontal").</summary>
     void HandleInput()
     {
-        xInput = Input.GetAxis("Horizontal");
+        xInput = Input.GetAxisRaw("Horizontal");
     }
 
-    /// <summary>Applies jump force if jump button is pressed and player is grounded.</summary>
+    void Move()
+    {
+        rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
+
+        if (xInput != 0)
+            transform.localScale = new Vector3(Mathf.Sign(xInput), 1f, 1f);
+    }
+
     void HandleJump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded && Mathf.Abs(rb.linearVelocity.y) < 0.1f)
@@ -85,15 +65,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /// <summary>Applies horizontal movement based on input.
-    /// Also flips the player sprite to face movement direction.
-    /// </summary>
-    void ApplyMovement()
+    void HandleLanternToggle()
     {
-        rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
-
-        if (xInput != 0)
+        if (Input.GetKeyDown(KeyCode.F))
         {
+<<<<<<< Updated upstream
             float direction = Mathf.Sign(xInput);
             transform.localScale = new Vector3(direction, 1f, 1f);
         }
@@ -176,32 +152,64 @@ public class PlayerMovement : MonoBehaviour
             // Check for interactable object within range
             Collider2D target = Physics2D.OverlapCircle(interactPoint.position, interactRange, interactLayer);
             if (target != null && target.TryGetComponent(out IInteractable interactable))
+=======
+            if (lanternEquipped)
+>>>>>>> Stashed changes
             {
-                StartCoroutine(PerformInteraction(interactable));
+                anim.SetTrigger("UnequipLantern");
+            }
+            else
+            {
+                anim.SetTrigger("EquipLantern");
             }
         }
     }
 
-    /// <summary>
-    /// Coroutine to perform interaction:
-    /// disables movement, plays interaction animation, invokes interactable's Interact,
-    /// waits before enabling movement again.
-    /// </summary>
-    System.Collections.IEnumerator PerformInteraction(IInteractable interactable)
+    // Animation Events should call these
+    public void OnEquipLanternComplete() => lanternEquipped = true;
+    public void OnUnequipLanternComplete() => lanternEquipped = false;
+
+    void UpdateStateFlags()
     {
-        isInteracting = true;
-        rb.linearVelocity = Vector2.zero; // Stop player movement
-        anim.SetTrigger("Interact"); // Trigger interact animation
+        isJumping = rb.linearVelocity.y > 0.1f && !isGrounded;
+        isFalling = rb.linearVelocity.y < -0.1f && !isGrounded;
+    }
 
-        yield return new WaitForSeconds(0.5f); // Wait for anim duration
+    void UpdateAnimator()
+    {
+        anim.SetFloat("Speed", Mathf.Abs(xInput));
+        anim.SetBool("Grounded", isGrounded);
+        anim.SetBool("IsWalking", Mathf.Abs(xInput) > 0.1f);
+        anim.SetBool("LanternEquipped", lanternEquipped);
+    }
 
-        interactable.Interact(); // Call object's interaction method
+    void CheckGround()
+    {
+        isGrounded = Physics2D.OverlapBox(
+            groundCheckPoint.position,
+            groundCheckSize,
+            0f,
+            groundLayer
+        );
+    }
 
-        // Extra wait time before player can move again
-        float extraWait = 0.3f;
-        yield return new WaitForSeconds(extraWait);
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheckPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(groundCheckPoint.position, groundCheckSize);
+        }
+    }
 
-        isInteracting = false; // Player moves again
+    public void TriggerInteract()
+    {
+        anim.SetTrigger("Interact");
+    }
+
+    public void TriggerDeath()
+    {
+        anim.Play(lanternEquipped ? "Player_Death_Lantern" : "Player_Death");
     }
 
         public bool IsWalking => Mathf.Abs(xInput) > 0.1f;

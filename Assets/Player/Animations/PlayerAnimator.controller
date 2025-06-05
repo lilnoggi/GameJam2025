@@ -11,7 +11,11 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< Updated upstream
   - {fileID: 5785231051656267997}
+=======
+  - {fileID: 710516440100949364}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -38,7 +42,12 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< Updated upstream
   - {fileID: -4831337619698743076}
+=======
+  - {fileID: 3886912588283063650}
+  - {fileID: 8805706191715644241}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -65,7 +74,11 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< Updated upstream
   - {fileID: -5799423863801306029}
+=======
+  - {fileID: -6869659556091976992}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -81,34 +94,57 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-6462018612038103203
-AnimatorState:
-  serializedVersion: 6
+--- !u!1101 &-8354351341586558597
+AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle_UnequipLantern
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 7273504284259666804}
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3e8e49f09e2d20045a78f6cf85cac82d, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1101 &-5799423863801306029
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsWalking
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: EquipLantern
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8911982904114544892}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.625
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-7998654961993120952
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 4605140053253031500}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.625
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-6869659556091976992
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,6 +161,71 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.625
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-6462018612038103203
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player_Idle_UnequipLantern
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+<<<<<<< Updated upstream
+  - {fileID: 7273504284259666804}
+=======
+  - {fileID: 5876106558428880524}
+>>>>>>> Stashed changes
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 3e8e49f09e2d20045a78f6cf85cac82d, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+<<<<<<< Updated upstream
+--- !u!1101 &-5799423863801306029
+=======
+--- !u!1101 &-6047539566671086002
+>>>>>>> Stashed changes
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+<<<<<<< Updated upstream
+  m_DstState: {fileID: 5108212657913775767}
+=======
+  m_DstState: {fileID: 192163644118823875}
+>>>>>>> Stashed changes
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+<<<<<<< Updated upstream
+  m_ExitTime: 0.625
+=======
+  m_ExitTime: 0
+>>>>>>> Stashed changes
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -259,7 +360,11 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 0
+<<<<<<< Updated upstream
 --- !u!1101 &-3592356682175286503
+=======
+--- !u!1101 &-3740777366616395180
+>>>>>>> Stashed changes
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,16 +375,23 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: UnequipLantern
     m_EventTreshold: 0
+<<<<<<< Updated upstream
   - m_ConditionMode: 2
     m_ConditionEvent: IsWalking
     m_EventTreshold: 0
+=======
+>>>>>>> Stashed changes
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6462018612038103203}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
+<<<<<<< Updated upstream
   m_TransitionDuration: 1
+=======
+  m_TransitionDuration: 0.25
+>>>>>>> Stashed changes
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -287,6 +399,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< Updated upstream
 --- !u!1101 &-3429285241906918486
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -312,6 +425,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1102 &-2576599722279178110
 AnimatorState:
   serializedVersion: 6
@@ -324,8 +439,12 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2503052264244593400}
+<<<<<<< Updated upstream
   - {fileID: -3429285241906918486}
   - {fileID: 6597398811565725891}
+=======
+  - {fileID: 8851350874466659292}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -405,7 +524,11 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< Updated upstream
   - {fileID: 456305348820843258}
+=======
+  - {fileID: -6047539566671086002}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -472,12 +595,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsJumping
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -519,6 +636,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< Updated upstream
 --- !u!1101 &456305348820843258
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -545,6 +663,9 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1781757890097362889
+=======
+--- !u!1101 &710516440100949364
+>>>>>>> Stashed changes
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,7 +674,11 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< Updated upstream
   m_DstState: {fileID: 4605140053253031500}
+=======
+  m_DstState: {fileID: -8613033118797404226}
+>>>>>>> Stashed changes
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -620,6 +745,34 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &3886912588283063650
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsWalking
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: UnequipLantern
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8405437792976278736}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.625
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &4235697132080559665
 AnimatorState:
   serializedVersion: 6
@@ -631,7 +784,11 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< Updated upstream
   - {fileID: 1781757890097362889}
+=======
+  - {fileID: -7998654961993120952}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -658,7 +815,12 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< Updated upstream
   - {fileID: -3592356682175286503}
+=======
+  - {fileID: -3740777366616395180}
+  - {fileID: 5668839401953886934}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -686,8 +848,12 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5218357767028605984}
+<<<<<<< Updated upstream
   - {fileID: 7047084782925877504}
   - {fileID: 8037590658535277270}
+=======
+  - {fileID: -8354351341586558597}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -731,7 +897,42 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< Updated upstream
 --- !u!1101 &5785231051656267997
+=======
+--- !u!1101 &5668839401953886934
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsWalking
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: LanternEquipped
+    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.1
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8613033118797404226}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5876106558428880524
+>>>>>>> Stashed changes
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -740,7 +941,11 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< Updated upstream
   m_DstState: {fileID: -8613033118797404226}
+=======
+  m_DstState: {fileID: -2576599722279178110}
+>>>>>>> Stashed changes
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -796,10 +1001,17 @@ AnimatorStateMachine:
     m_Position: {x: 40, y: -160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6462018612038103203}
+<<<<<<< Updated upstream
     m_Position: {x: 290, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4605140053253031500}
     m_Position: {x: 40, y: -260, z: 0}
+=======
+    m_Position: {x: 420, y: -220, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 4605140053253031500}
+    m_Position: {x: 290, y: -300, z: 0}
+>>>>>>> Stashed changes
   - serializedVersion: 1
     m_State: {fileID: -2545685508046691960}
     m_Position: {x: 50, y: -100, z: 0}
@@ -808,6 +1020,7 @@ AnimatorStateMachine:
     m_Position: {x: 650, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8613033118797404226}
+<<<<<<< Updated upstream
     m_Position: {x: 880, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8911982904114544892}
@@ -815,24 +1028,41 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -8405437792976278736}
     m_Position: {x: 760, y: -40, z: 0}
+=======
+    m_Position: {x: 930, y: -240, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8911982904114544892}
+    m_Position: {x: 690, y: -190, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8405437792976278736}
+    m_Position: {x: 910, y: -140, z: 0}
+>>>>>>> Stashed changes
   - serializedVersion: 1
     m_State: {fileID: 3657304603925954779}
-    m_Position: {x: -210, y: 50, z: 0}
+    m_Position: {x: -180, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6225016294609390672}
-    m_Position: {x: -250, y: -10, z: 0}
+    m_Position: {x: -200, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4955816922325503527}
-    m_Position: {x: -200, y: 130, z: 0}
+    m_Position: {x: -10, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 192163644118823875}
+<<<<<<< Updated upstream
     m_Position: {x: 480, y: -30, z: 0}
+=======
+    m_Position: {x: 300, y: 100, z: 0}
+>>>>>>> Stashed changes
   - serializedVersion: 1
     m_State: {fileID: -2355800710435528332}
-    m_Position: {x: 380, y: -360, z: 0}
+    m_Position: {x: 550, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1565089062795006704}
+<<<<<<< Updated upstream
     m_Position: {x: 480, y: -170, z: 0}
+=======
+    m_Position: {x: 300, y: 50, z: 0}
+>>>>>>> Stashed changes
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -4033512638315855982}
@@ -844,7 +1074,11 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2576599722279178110}
+<<<<<<< Updated upstream
 --- !u!1101 &6597398811565725891
+=======
+--- !u!1101 &8805706191715644241
+>>>>>>> Stashed changes
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -852,9 +1086,43 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
+<<<<<<< Updated upstream
   - m_ConditionMode: 2
     m_ConditionEvent: IsWalking
     m_EventTreshold: 0
+=======
+  - m_ConditionMode: 4
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.1
+  - m_ConditionMode: 1
+    m_ConditionEvent: LanternEquipped
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsWalking
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 4605140053253031500}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.625
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &8851350874466659292
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+>>>>>>> Stashed changes
   - m_ConditionMode: 1
     m_ConditionEvent: EquipLantern
     m_EventTreshold: 0
@@ -872,6 +1140,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< Updated upstream
 --- !u!1101 &7047084782925877504
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -978,3 +1247,5 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> Stashed changes

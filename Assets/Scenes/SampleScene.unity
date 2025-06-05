@@ -304,7 +304,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.022319213, y: -0.009491444}
+  m_Offset: {x: 0.026114061, y: -0.3782758}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -314,7 +314,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4197004, y: 0.7029834}
+  m_Size: {x: 0.23888284, y: 0.006271094}
   m_EdgeRadius: 0
 --- !u!4 &64394108
 Transform:
@@ -803,9 +803,7 @@ GameObject:
   - component: {fileID: 1337025193}
   - component: {fileID: 1337025192}
   - component: {fileID: 1337025191}
-  - component: {fileID: 1337025190}
   - component: {fileID: 1337025194}
-  - component: {fileID: 1337025196}
   - component: {fileID: 1337025195}
   m_Layer: 7
   m_Name: Player
@@ -814,6 +812,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!114 &1337025190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +838,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   interactPoint: {fileID: 1372583348}
+=======
+>>>>>>> Stashed changes
 --- !u!50 &1337025191
 Rigidbody2D:
   serializedVersion: 5
@@ -970,29 +971,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1337025189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1fcf0feea9a484bada7de949d05e2d, type: 3}
+  m_Script: {fileID: 11500000, guid: ce05279bb3d9751499ab9fd76e0329ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  lanternFill: {fileID: 0}
-  knockbackForce: 5
-  knockbackDuration: 0.2
---- !u!114 &1337025196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337025189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6cc05c2d59a0e34f82bf99635fa9180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lanternLightObject: {fileID: 0}
-  lanternLight: {fileID: 0}
-  fadeDuration: 0.5
+  moveSpeed: 5
+  jumpForce: 8
+  groundCheckPoint: {fileID: 64394108}
+  groundCheckSize: {x: 0.5, y: 0.1}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1372583347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1078,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.022665173, y: -0.009469777}
+  m_Offset: {x: -0.022665173, y: -0.017697886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1100,7 +1088,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4220379, y: 0.69784945}
+  m_Size: {x: 0.4220379, y: 0.71430564}
   m_EdgeRadius: 0
 --- !u!1 &1845769304
 GameObject:
